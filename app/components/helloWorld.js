@@ -1,14 +1,14 @@
-const React = require('react');
-const ReactDOM = require('react-dom');
+// const React = require('react');
+// const ReactDOM = require('react-dom');
+//
+// const HelloGreeting = React.createClass({
+//   render: function() {
+//     return (
+//       <div>
+//         Hello {this.props.name}!
+//       </div>
+//     )
+//   }
+// });
 
-const HelloWorld = React.createClass({
-  render: function() {
-    return (
-      <div>
-        Hello World
-      </div>
-    )
-  }
-});
-
-ReactDOM.render(<HelloWorld />, document.getElementById('app'));
+//ReactDOM.render(<HelloGreeting  />, document.getElementById('app'));
