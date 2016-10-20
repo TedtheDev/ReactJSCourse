@@ -4,6 +4,8 @@ const styles = require('../styles')
 const Link = require('react-router').Link;
 const UserDetails = require('./UserDetails');
 const UserDetailsWrapper = require('./UserDetailsWrapper');
+const MainContainerWrapper = require('./MainContainerWrapper');
+const Loading = require('./Loading');
 
 function puke (obj) {
   return <pre>{JSON.stringify(obj, null, ' ')}</pre>
@@ -11,8 +13,8 @@ function puke (obj) {
 
 function ConfirmBattle(props) {
   return props.isLoading === true
-    ? <div>IS LOADING</div>
-    : <div className='' style={styles.transparentBg}>
+    ? <Loading speed={800} text='Wait One Moment'/>
+    : <MainContainerWrapper>
         <h1>Confirm players</h1>
         <div className=''>
           <UserDetailsWrapper header="Player 1">
@@ -36,7 +38,7 @@ function ConfirmBattle(props) {
             </Link>
           </div>
         </div>
-    </div>
+    </MainContainerWrapper>
 }
 
 ConfirmBattle.propTypes = {
