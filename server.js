@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, '/dist')));
 
 //render index on /
 app.get('/', function( req, res) {
-  res.render('index.html');
+  res.render(__dirname+ 'dist/index.html');
 });
 
 //listening
